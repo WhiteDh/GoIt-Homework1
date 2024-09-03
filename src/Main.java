@@ -1,34 +1,20 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
+class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        ShapePrinter printer = new ShapePrinter();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        Circle circle = new Circle(5);
+        printer.printShapeDetails(circle);
 
-            System.out.println("Hello world!");
+        Rectangle rectangle = new Rectangle(4, 6);
+        printer.printShapeDetails(rectangle);
 
+        Triangle triangle = new Triangle(3, 4);
+        printer.printShapeDetails(triangle);
 
-            int a = 5;
-            var c = "f";
-            int b = a + 11;
-            System.out.println("b");
-        }
+        Square square = new Square(4);
+        printer.printShapeDetails(square);
 
-
+        Ellipse ellipse = new Ellipse(5, 3);
+        printer.printShapeDetails(ellipse);
     }
-
-    public int dodo(){
-        return 5;
-    }
-
-
-
-
-
 }
